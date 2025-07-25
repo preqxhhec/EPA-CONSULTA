@@ -1,31 +1,31 @@
-document.getElementById('BTN').addEventListener('click', function(e) {
-    e.preventDefault();
-    var formData = new FormData(document.getElementById('formulario'));
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://script.google.com/macros/s/AKfycbzYf-vOcMrOquenIFpCaty7DuoeA434AmGKYe8h8xo1SUKjg47YciwLu0sfjvh4G0J24Q/exec');
-    xhr.onload = function() {
-        if (xhr.status === 200) {
+//document.getElementById('BTN').addEventListener('click', function(e) {
+//    e.preventDefault();
+//    var formData = new FormData(document.getElementById('formulario'));
+//    var xhr = new XMLHttpRequest();
+ //   xhr.open('POST', 'https://script.google.com/macros/s/AKfycbzYf-vOcMrOquenIFpCaty7DuoeA434AmGKYe8h8xo1SUKjg47YciwLu0sfjvh4G0J24Q/exec');
+ //   xhr.onload = function() {
+  //      if (xhr.status === 200) {
             
-            alert('¡Registro exitoso!');
-            window.print();
-            formulario.reset();
+//            alert('¡Registro exitoso!');
+//            window.print();
+//            formulario.reset();
             cargarFechaActual();
-        } else {
-            console.error('Submission error:', xhr.status, xhr.responseText);
-            alert('Error al enviar el formulario: ' + xhr.responseText);
-        }
-    };
-    xhr.onerror = function() {
-        console.error('Connection error during submission');
-        alert('Error de conexión al enviar el formulario');
-    };
-    xhr.send(formData);
-});
+ //       } else {
+ //           console.error('Submission error:', xhr.status, xhr.responseText);
+ //           alert('Error al enviar el formulario: ' + xhr.responseText);
+  //      }
+ //   };
+  //  xhr.onerror = function() {
+ //       console.error('Connection error during submission');
+ //       alert('Error de conexión al enviar el formulario');
+//    };
+//    xhr.send(formData);
+//});
 
 function verificarContraseña() {
     var password = document.getElementById("password").value;
     var imagen = document.querySelector('.img2');
-    if (password === "Epa0102") {
+    if (password === "") {
         document.getElementById("formulario").style.display = "block";
         document.getElementById("acceso").style.display = "none";
         imagen.style.display = 'none';
@@ -34,29 +34,29 @@ function verificarContraseña() {
     }
 }
 
-function cargarFechaActual() {
-    var today = new Date();
-    var day = ("0" + today.getDate()).slice(-2);
-    var month = ("0" + (today.getMonth() + 1)).slice(-2);
-    var year = today.getFullYear();
-    var todayString = year + "-" + month + "-" + day;
-    document.getElementById("fecha").value = todayString;
-}
+//function cargarFechaActual() {
+//    var today = new Date();
+//    var day = ("0" + today.getDate()).slice(-2);
+//    var month = ("0" + (today.getMonth() + 1)).slice(-2);
+//    var year = today.getFullYear();
+//    var todayString = year + "-" + month + "-" + day;
+//    document.getElementById("fecha").value = todayString;
+//}
 
-window.onload = function() {
-    cargarFechaActual();
-}
+//window.onload = function() {
+//    cargarFechaActual();
+//}
 
-document.getElementById("BTNR").onclick = function() {
-    setTimeout(cargarFechaActual, 0);
-}
+//document.getElementById("BTNR").onclick = function() {
+//    setTimeout(cargarFechaActual, 0);
+//}
 
 function calcularIMC() {
-    const peso = parseFloat(document.getElementById('peso').value);
+   const peso = parseFloat(document.getElementById('peso').value);
     const altura = parseFloat(document.getElementById('altura').value);
-    if (peso > 0 && altura > 0) {
+  if (peso > 0 && altura > 0) {
         const imc = peso / (altura * altura);
-        document.getElementById('resultado').value = imc.toFixed(2);
+       document.getElementById('resultado').value = imc.toFixed(2);
     } else {
         document.getElementById('resultado').value = '';
     }
@@ -180,3 +180,24 @@ function imprimir(){
     formulario.reset();
 cargarFechaActual();
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Select the form
+    const formulario = document.getElementById('formulario');
+    if (!formulario) return; // Exit if form not found
+
+    // Get all input, textarea, and select elements within the form
+    const inputs = formulario.querySelectorAll('input, textarea, select');
+
+    inputs.forEach(element => {
+        // Skip the rutSearch input
+        if (element.id !== 'rutSearch') {
+            if (element.tagName === 'SELECT' || element.type === 'checkbox') {
+                element.disabled = true; // Use disabled for selects and checkboxes
+            } else {
+                element.readOnly = true; // Use readOnly for inputs and textareas
+            }
+        }
+    });
+});
