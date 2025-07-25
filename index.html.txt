@@ -216,7 +216,7 @@
         </div>
 
         <div id="botones">
-            <button type="submit" class="BTN" name="BTN" id="BTN">Guardar / Imprimir</button>
+      
             <button type="reset" class="BTNR" name="BTNR" id="BTNR">Nuevo Paciente</button>
             <label for="TC" class="TC">TOMO CONOCIMIENTO___________________ FECHA:_____/______/_____</label>
         </div>
