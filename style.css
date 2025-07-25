@@ -1,0 +1,288 @@
+body{
+    margin: auto;
+       padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, #007bff, #00c6ff, #28a745,#ffc107);
+}
+
+.formulario{
+ margin: 0;
+ width: 19cm;
+ height: 26.5cm;
+ margin-top: 10px;
+ padding: 5px;
+ border: 1px solid #000;
+ font-family: sans-serif;
+ font-size: 10px;
+ align-items: center;
+ box-sizing: border-box;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+ background-color: white; 
+ 
+}
+
+
+
+
+
+
+img{
+    width: 90px;
+
+    }
+
+h1{
+    margin-top: auto;
+    margin-left: 100px;
+    vertical-align: middle;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 25px;
+    align-items: center;
+}
+
+
+
+
+
+h2{
+    padding-top: 0%;
+    font-family: sans-serif;
+    font-size: 12px;
+  
+}
+
+
+h3{
+    margin-top: 0;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 25px;
+    align-items: center;
+   
+}
+
+
+
+.select{
+  width: 46%;
+    display: inline-block;
+
+}
+
+
+
+.inputficha{
+    width: 10%;
+}
+
+
+
+.nombre{
+    width: 30%;
+    margin-top: 5px;
+}
+.rut{
+    width: 15%;
+}
+
+.lebelrut{
+    padding-right: 19px;
+    padding-left: 12px;
+}
+
+.edad{
+    width: 6%;
+}
+
+.diagnostico{
+    width: 35%;
+margin-top: 5px;
+}
+
+.labelcx{
+    padding-right: 13px;
+}
+.cirugia{
+    width: 44%;
+}
+
+.fieldset1, .fieldset2, .fieldset3, .fieldset4,.fieldset5,.fieldset6{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-color: #f1f1f1;
+        
+}
+
+.medicos, .medicamentos, .laboratorios,.evaluaciones{
+    width: 48.5%;
+    max-height: 80px;
+    overflow-y: hidden;
+    resize: none;
+    
+}
+
+
+.EKG{
+    padding-top: 5PX;
+   
+}
+
+.ekg{
+    display: inline-block;
+    width: 94%;
+}
+
+
+.presion-arterial, .frecuencia-cardiaca, .frecuencia-respiratoria, .saturacion, .peso, .talla, .imc{
+    width: 9.5%;
+    font-family: sans-serif;
+    font-size: 12px;
+    display: inline-block;
+
+}
+
+
+.indicaciones{
+    width: 98%;
+    max-height: 120px;
+    overflow-y: hidden;
+    resize: none;
+}
+
+.anestesiologos{
+    display: inline-block;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#anestesiologo{
+    display: inline-block;
+    width: 50%;
+
+}
+
+.firma{
+    margin-left: 90px;
+}
+
+.BTN, .botonpwd, .BTNR{
+    width: auto;
+    margin: auto;
+    display: block;
+    background-color: #4CAF50;
+
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+
+ .botonpwd:hover{
+    background-color: #005600;
+        }
+
+.btnPxNew:hover{
+     background-color: #005600;
+                }
+
+.BTN:hover{
+     background-color: #005600;
+                        }
+
+.BTNR:hover{
+    background-color: #005600;
+                                               }
+                                              
+
+.formulario{
+    display: none;
+}
+
+#acceso{
+ 
+    align-items: center;
+    background-color: #f0f0f0; /* Fondo para mejor visibilidad */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    margin-top: 300px;
+  
+    
+}
+
+.botonpwd{
+    display: inline-block;
+}
+
+#botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.img2{
+    margin-top: 300px;
+    width: 300px;
+    display: inline-block;
+    padding: 5px;
+  
+    margin-right: 20px; /* Espacio entre la imagen y los elementos */
+}
+
+.h2, .img2{
+    display: inline-block; 
+    vertical-align: middle;
+}
+
+
+.search-section {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-section button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-section button:hover {
+    background-color: #0056b3;
+}
+
+#searchResult {
+    margin-left: 10px;
+    color: #333;
+    font-style: italic;
+}
+
+/* Additional existing styles (ensure compatibility) */
+#botones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+
+
+.h1btn {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  }
